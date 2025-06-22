@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Monket - Intelligent Note Management Platform</title>
+    <meta name="description" content="Transform your note-taking with Notes Monkey. Smart organization, powerful search, and seamless collaboration for modern Indian workspaces.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(to right, #ea580c, #dc2626);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #fed7aa 0%, #ffffff 50%, #dcfce7 100%);
+        }
+        
+        .stats-gradient {
+            background: linear-gradient(to right, #ea580c, #dc2626);
+        }
+        
+        .security-gradient {
+            background: linear-gradient(135deg, #111827, #1f2937);
+        }
+        
+        .cta-gradient {
+            background: linear-gradient(135deg, #16a34a, #15803d);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .icon-hover {
+            transition: transform 0.3s ease;
+        }
+        
+        .icon-hover:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white/95 backdrop-blur-sm border-b border-orange-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg flex items-center justify-center">
+                        <i data-lucide="book-open" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <span class="text-xl font-bold gradient-text">Notes Monkey</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-orange-600 transition-colors">Features</a>
+                    <a href="#how-it-works" class="text-gray-600 hover:text-orange-600 transition-colors">How It Works</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-orange-600 transition-colors">Testimonials</a>
+                    <a href="#security" class="text-gray-600 hover:text-orange-600 transition-colors">Security</a>
+                    <button class="bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-2 rounded-lg hover:from-green-700 hover:to-green-800 transition-all duration-200 shadow-lg hover:shadow-xl">
+                        Get Started
+                    </button>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t border-orange-100 hidden">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#features" class="block py-2 text-gray-600 hover:text-orange-600">Features</a>
+                <a href="#how-it-works" class="block py-2 text-gray-600 hover:text-orange-600">How It Works</a>
+                <a href="#testimonials" class="block py-2 text-gray-600 hover:text-orange-600">Testimonials</a>
+                <a href="#security" class="block py-2 text-gray-600 hover:text-orange-600">Security</a>
+                <button class="w-full bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-2 rounded-lg mt-4">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden hero-gradient">
+        <div class="absolute inset-0 bg-gradient-to-r from-orange-400/10 to-green-400/10"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+            <div class="text-center">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                    Your Ideas Deserve a 
+                    <span class="gradient-text">Better Home</span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                    Transform the way you capture, organize, and collaborate on ideas. Built for the modern Indian workspace 
+                    with security and simplicity at its core.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                    <button class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-2">
+                        Start Free Trial
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </button>
+                    <button class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl text-lg font-semibold hover:border-orange-300 hover:text-orange-600 transition-all duration-200">
+                        Watch Demo
+                    </button>
+                </div>
+                <div class="flex items-center justify-center gap-8 text-sm text-gray-500">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="check-circle" class="w-4 h-4 text-green-600"></i>
+                        <span>14-day free trial</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="check-circle" class="w-4 h-4 text-green-600"></i>
+                        <span>No credit card required</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="check-circle" class="w-4 h-4 text-green-600"></i>
+                        <span>Cancel anytime</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    Everything you need to 
+                    <span class="text-orange-600">stay organized</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Powerful features designed for individuals and teams who value productivity and collaboration.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="features-grid">
+                <!-- Features will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-gradient-to-br from-gray-50 to-orange-50/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    How <span class="text-orange-600">Notes Monkey</span> Works
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Get started in minutes with our intuitive workflow designed for maximum productivity.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8" id="how-it-works-grid">
+                <!-- Steps will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 stats-gradient">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center text-white">
+                <div>
+                    <div class="text-3xl lg:text-4xl font-bold mb-2">10M+</div>
+                    <div class="text-orange-100">Notes Created</div>
+                </div>
+                <div>
+                    <div class="text-3xl lg:text-4xl font-bold mb-2">50K+</div>
+                    <div class="text-orange-100">Active Users</div>
+                </div>
+                <div>
+                    <div class="text-3xl lg:text-4xl font-bold mb-2">99.9%</div>
+                    <div class="text-orange-100">Uptime</div>
+                </div>
+                <div>
+                    <div class="text-3xl lg:text-4xl font-bold mb-2">24/7</div>
+                    <div class="text-orange-100">Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                        Our <span class="text-orange-600">Story</span>
+                    </h2>
+                    <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+                        <p>
+                            Notes Monkey was born from a simple frustration: the inability to find important notes when you need them most. 
+                            Our founders, a team of engineers and designers from India's top tech companies, experienced this pain daily.
+                        </p>
+                        <p>
+                            We believed that note-taking shouldn't be complicated. It should be as natural as having a conversation, 
+                            as organized as your thoughts, and as secure as your most precious memories. That's why we built Notes Monkey 
+                            with Indian users in mind - understanding our unique workflow patterns, collaboration styles, and security needs.
+                        </p>
+                        <p>
+                            Today, we're proud to serve thousands of users across India, from students preparing for competitive exams 
+                            to teams building the next generation of Indian startups. Our mission remains simple: to make your ideas 
+                            accessible, organized, and secure.
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 mt-8">
+                        <div class="flex items-center gap-2 text-orange-600">
+                            <i data-lucide="heart" class="w-5 h-5 fill-current"></i>
+                            <span class="font-semibold">Made with love in India</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-green-600">
+                            <i data-lucide="award" class="w-5 h-5"></i>
+                            <span class="font-semibold">Award-winning design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:pl-12">
+                    <div class="bg-gradient-to-br from-orange-100 to-green-100 rounded-3xl p-8 text-center">
+                        <div class="w-24 h-24 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="book-open" class="w-12 h-12 text-white"></i>
+                        </div>
+                        <blockquote class="text-xl font-medium text-gray-800 mb-4">
+                            "We're not just building a note-taking app. We're creating a platform that understands how Indians think, work, and collaborate."
+                        </blockquote>
+                        <div class="text-gray-600">
+                            <div class="font-semibold">Arjun Mehta</div>
+                            <div class="text-sm">Co-founder & CEO</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    Loved by <span class="text-orange-600">thousands</span> across India
+                </h2>
+                <p class="text-xl text-gray-600">See what our users have to say about their experience</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8" id="testimonials-grid">
+                <!-- Testimonials will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Security & Privacy Section -->
+    <section id="security" class="py-20 security-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+                    Your <span class="text-orange-400">Security</span> is Our Priority
+                </h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    We've built Notes Monkey with enterprise-grade security from the ground up. Your notes are protected by the same 
+                    technology used by banks and government institutions.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8" id="security-grid">
+                <!-- Security features will be populated by JavaScript -->
+            </div>
+            
+            <div class="mt-16 text-center">
+                <div class="inline-flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-2xl px-8 py-4">
+                    <i data-lucide="shield" class="w-8 h-8 text-green-400"></i>
+                    <div class="text-left">
+                        <div class="font-semibold text-lg">SOC 2 Type II Compliant</div>
+                        <div class="text-gray-300 text-sm">Independently audited for security and availability</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 cta-gradient">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+                Ready to transform your note-taking?
+            </h2>
+            <p class="text-xl text-green-100 mb-8">
+                Join thousands of users who have already made the switch to smarter note management.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button class="bg-white text-green-700 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-50 transition-colors duration-200 shadow-lg">
+                    Start Your Free Trial
+                </button>
+                <button class="border-2 border-white text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white hover:text-green-700 transition-all duration-200">
+                    Contact Sales
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg flex items-center justify-center">
+                            <i data-lucide="book-open" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold">Notes Monkey</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Empowering productivity through intelligent note management.
+                    </p>
+                    <div class="text-sm text-gray-500">
+                        Made with ❤️ in India
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Product</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Security</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Enterprise</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Support</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">API Docs</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Status</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Press</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm">
+                    © 2024 Notes Monkey. All rights reserved.
+                </div>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
